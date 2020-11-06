@@ -1,0 +1,15 @@
+parameters:
+    env(APP_NAME): numbernine
+    env(REDIS_URL): redis://localhost:6379
+
+services:
+    Redis:
+        class: Redis
+        calls:
+            - connect:
+                  - '%env(key:host:url:resolve:REDIS_URL)%'
+                  - '%env(key:port:url:int:resolve:REDIS_URL)%'
+
+    Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler:
+        arguments:
+            - '@Redis'
