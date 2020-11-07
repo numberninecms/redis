@@ -1,5 +1,4 @@
 parameters:
-    env(APP_NAME): numbernine
     env(REDIS_URL): redis://localhost:6379
 
 services:

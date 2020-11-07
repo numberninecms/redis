@@ -31,16 +31,15 @@ class NumberNineRedisExtension extends Extension implements PrependExtensionInte
 
     public function prepend(ContainerBuilder $container): void
     {
+        $extensions = $container->getExtensions();
         $resource = Yaml::parseFile(__DIR__ . '/../Resources/config/app.yaml');
+
         foreach ($resource as $name => $config) {
             if (empty($extensions[$name])) {
                 continue;
             }
-            if ($name === 'security') {
-                $securityConfigs[] = $config;
-            } else {
-                $container->prependExtensionConfig($name, $config);
-            }
+
+            $this->mergeConfigIntoOne($container, $name, $config);
         }
     }
 
