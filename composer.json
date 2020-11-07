@@ -17,6 +17,7 @@
         "ext-redis": "*",
         "numberninecms/common": "dev-develop",
         "symfony/config": "^5.1",
+        "symfony/console": "^5.1",
         "symfony/dependency-injection": "^5.1",
         "symfony/yaml": "^5.1"
     },

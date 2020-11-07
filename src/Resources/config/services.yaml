@@ -1,8 +1,20 @@
 parameters:
-    env(APP_NAME): numbernine
     env(REDIS_URL): redis://localhost:6379
 
 services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            string $projectPath: '%kernel.project_dir%'
+
+    NumberNine\RedisBundle\:
+        resource: '../../*'
+        exclude:
+            - '../../DependencyInjection'
+            - '../../Resources'
+            - '../../NumberNineRedisBundle.php'
+
     Redis:
         class: Redis
         calls:

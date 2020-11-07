@@ -8,9 +8,7 @@ Installation wizard and auto-configuration for Redis cache and sessions with Num
 composer require numberninecms/redis:dev-develop
 ```
 
-After installing dependencies, composer will run the configuration wizard.
-
-You can also manually run installation command:
+After installing dependencies, run:
 
 ```bash
 php bin/console numbernine:install:redis --force
