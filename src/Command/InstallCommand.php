@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the NumberNine package.
  *
@@ -16,6 +17,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+
 use function NumberNine\Common\Util\ConfigUtil\file_env_variable_exists;
 use function NumberNine\Common\Util\ConfigUtil\file_put_env_variable;
 

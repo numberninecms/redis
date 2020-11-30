@@ -1,0 +1,23 @@
+os: linux
+dist: focal
+language: php
+
+php:
+    - 7.4
+    - nightly
+
+env:
+    - COMPOSER_VERSION=2
+
+cache:
+    directories:
+        - ~/.cache/composer
+
+before_install:
+    - echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+install:
+    - composer install
+
+script:
+    - ./vendor/bin/grumphp run --no-interaction
