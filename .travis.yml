@@ -4,7 +4,7 @@ language: php
 
 php:
     - 7.4
-    - nightly
+    - 8.0
 
 env:
     - COMPOSER_VERSION=2
