@@ -12,7 +12,6 @@
 namespace NumberNine\RedisBundle\DependencyInjection;
 
 use NumberNine\Common\Bundle\MergeConfigurationTrait;
-use NumberNine\Model\General\Settings;
 use Symfony\Component\Config\Exception\FileLocatorFileNotFoundException;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
